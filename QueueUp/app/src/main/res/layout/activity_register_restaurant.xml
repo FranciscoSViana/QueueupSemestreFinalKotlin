@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context="com.example.queueup.view.RegisterRestaurantActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logoqueueup" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="@string/app_rsocial"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="@string/app_nfantasia"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="@string/app_tel"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="CEP"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="@string/app_estado"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="@string/app_cidade"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="Bairro"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="@string/app_end"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="@string/app_numero"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="@string/app_especialidade"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/button_background"
+                android:onClick="registerUser"
+                android:text="@string/app_cad"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

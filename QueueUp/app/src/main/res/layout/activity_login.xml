@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logoqueueup" />
+
+            <EditText
+                android:id="@+id/edit_cpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:drawableStart="@drawable/iconuser"
+                android:drawablePadding="10dp"
+                android:hint="CPF/CNPJ"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:drawableStart="@drawable/trava"
+                android:drawablePadding="10dp"
+                android:hint="@string/app_senha"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                android:text="@string/app_esqsenha"
+                android:textColor="#AD000000" />
+
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_background"
+                android:text="@string/app_entrar"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:text="@string/app_cad"
+                android:textAllCaps="false"
+                android:textColor="#AD000000"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
