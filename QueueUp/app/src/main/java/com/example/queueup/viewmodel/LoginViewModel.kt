@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.queueup.service.model.HeaderModel
+import com.example.queueup.service.model.PersonHeaderModel
 import com.example.queueup.service.constants.TaskConstants
 import com.example.queueup.service.listener.APIListener
 import com.example.queueup.service.listener.ValidationListener
@@ -24,11 +24,11 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
     fun doLogin(cpf: String, password: String) {
         mPersonRepository.login(cpf, password, object : APIListener {
-            override fun onSuccess(model: HeaderModel) {
+            override fun onSuccess(modelPerson: PersonHeaderModel) {
 
-                mSharedPreferences.store(TaskConstants.SHARED.CPF_KEY, model.cpf)
-                mSharedPreferences.store(TaskConstants.SHARED.PASSWORD_KEY, model.password)
-                mSharedPreferences.store(TaskConstants.SHARED.PERSON_NAME, model.name)
+                mSharedPreferences.store(TaskConstants.SHARED.CPF_KEY, modelPerson.cpf)
+                mSharedPreferences.store(TaskConstants.SHARED.PASSWORD_KEY, modelPerson.password)
+                mSharedPreferences.store(TaskConstants.SHARED.PERSON_NAME, modelPerson.name)
 
                 mLogin.value = ValidationListener()
             }

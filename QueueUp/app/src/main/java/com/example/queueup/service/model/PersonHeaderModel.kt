@@ -2,7 +2,7 @@ package com.example.queueup.service.model
 
 import com.google.gson.annotations.SerializedName
 
-class HeaderModel {
+class PersonHeaderModel {
 
     @SerializedName("cpf")
     var cpf: String = ""

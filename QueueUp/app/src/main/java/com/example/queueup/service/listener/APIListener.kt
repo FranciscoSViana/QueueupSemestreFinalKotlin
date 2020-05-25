@@ -1,9 +1,10 @@
 package com.example.queueup.service.listener
 
-import com.example.queueup.service.model.HeaderModel
+import com.example.queueup.service.model.PersonHeaderModel
 
 interface APIListener {
 
-    fun onSuccess(model: HeaderModel)
+    fun onSuccess(modelPerson: PersonHeaderModel)
     fun onFailure(str: String)
+
 }

@@ -9,10 +9,21 @@ class TaskConstants private constructor() {
         const val PERSON_NAME = "nome"
     }
 
+    object SHAREDRESTAURANT {
+        const val CNPJ_KEY = "cnpj"
+        const val PASSWORD_CNPJ = "senha"
+        const val RESTAURANT_NAME = "nome"
+    }
+
     //Requisições API
     object HEADER {
         const val CPF_KEY = "cpf"
         const val PASSWORD_KEY = "senha"
+    }
+
+    object HEADERRESTAURANT {
+        const val CNPJ_KEY = "cnpj"
+        const val PASSWORD_CNPJ = "senha"
     }
 
     object HTTP {

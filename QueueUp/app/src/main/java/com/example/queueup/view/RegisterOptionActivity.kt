@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.queueup.R
 import com.example.queueup.viewmodel.RegisterUserViewModel
+import kotlinx.android.synthetic.main.activity_register_option.*
 
 class RegisterOptionActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -14,6 +15,8 @@ class RegisterOptionActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_option)
+
+        listeners()
     }
 
     override fun onClick(v: View) {
@@ -22,5 +25,10 @@ class RegisterOptionActivity : AppCompatActivity(), View.OnClickListener {
         } else if (v.id == R.id.tvModalUsuario) {
             startActivity(Intent(this, RegisterUserActivity::class.java))
         }
+    }
+
+    private fun listeners() {
+        tvModalRestaurante.setOnClickListener(this)
+        tvModalUsuario.setOnClickListener(this)
     }
 }

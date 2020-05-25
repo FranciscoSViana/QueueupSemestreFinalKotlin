@@ -1,6 +1,6 @@
 package com.example.queueup.service.repository.remote
 
-import com.example.queueup.service.model.HeaderModel
+import com.example.queueup.service.model.PersonHeaderModel
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -13,7 +13,7 @@ interface PersonService {
     fun login(
         @Field("cpf") cpf: String,
         @Field("senha") password: String
-    ): Call<HeaderModel>
+    ): Call<PersonHeaderModel>
 
     @POST("usuarios/criar")
     @FormUrlEncoded
@@ -21,5 +21,5 @@ interface PersonService {
         @Field("nome") name: String,
         @Field("cpf") cpf: String,
         @Field("senha") password: String
-    ): Call<HeaderModel>
+    ): Call<PersonHeaderModel>
 }
