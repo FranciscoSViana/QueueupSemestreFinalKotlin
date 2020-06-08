@@ -9,7 +9,7 @@ class RetrofitClient private constructor() {
     companion object {
 
         private lateinit var retrofit: Retrofit
-        private val baseUrl = "http://192.168.100.4/"
+        private val baseUrl = "http://queueup-backend-lb-437808896.us-east-1.elb.amazonaws.com/"
 
         private fun getRetrofitInstance(): Retrofit {
             val httpClient = OkHttpClient.Builder()
