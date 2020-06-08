@@ -39,4 +39,21 @@ class RestaurantRepository(val context: Context) {
 
         })
     }
+
+    fun create(restaurant: RestaurantHeaderModel, listener: APIRestaurantListener) {
+        val call: Call<RestaurantHeaderModel> = mRemote.createRestaurant(restaurant)
+        call.enqueue(object : Callback<RestaurantHeaderModel> {
+            override fun onFailure(call: Call<RestaurantHeaderModel>, t: Throwable) {
+                listener.onFailure(context.getString(R.string.ERROR_UNEXPECTED))
+            }
+
+            override fun onResponse(
+                call: Call<RestaurantHeaderModel>,
+                response: Response<RestaurantHeaderModel>
+            ) {
+                TODO("Not yet implemented")
+            }
+
+        })
+    }
 }

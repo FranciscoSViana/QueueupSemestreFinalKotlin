@@ -27,7 +27,7 @@
     <string name="app_cadastro">Cadastrar</string>
     //Cadastro Restaurante
     <string name="app_rsocial">Razão Social</string>
-    <string name="app_nfantasia">Nome Fantasia</string>
+    <string name="app_cnpj">CNPJ</string>
     <string name="app_tel">Telefone</string>
     <string name="app_estado">Estado</string>
     <string name="app_cidade">Cidade</string>

@@ -2,46 +2,27 @@ package com.example.queueup.service.model
 
 import com.google.gson.annotations.SerializedName
 
-class RestaurantHeaderModel {
+class RestaurantHeaderModel(
 
     @SerializedName("nome")
-    var name: String = ""
+    var name: String?,
 
     @SerializedName("cnpj")
-    var cnpj: String = ""
+    var cnpj: String?,
 
     @SerializedName("senha")
-    var password = ""
+    var password: String?,
 
-    @SerializedName("cidade")
-    var city: String = ""
-
-    @SerializedName("estado")
-    var country: String = ""
-
-    @SerializedName("logradouro")
-    var streets: String = ""
-
-    @SerializedName("numEndereco")
-    var nummber: String = ""
-
-    @SerializedName("cep")
-    var cep: String = ""
+    @SerializedName("endereco")
+    var endereco: EnderecoHeaderModel?,
 
     @SerializedName("telefoneRestaurante")
-    var telephone: String = ""
+    var telephone: String?,
 
     @SerializedName("tipo")
-    var type: String = ""
+    var tipo: String?,
 
-    @SerializedName("nMax")
-    var nMax: Int = 0
+    @SerializedName("capacidade")
+    var capacidade: MesaHeaderModel?
 
-    @SerializedName("nMin")
-    var nMin: Int = 0
-
-    @SerializedName("status")
-    var status: Boolean = true
-
-
-}
+)
