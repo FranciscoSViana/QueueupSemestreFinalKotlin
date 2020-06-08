@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QueueUp</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="app_senha">Password</string>
+    <string name="app_entrar">Enter</string>
+    <string name="app_cad">Register</string>
+    <string name="app_esqsenha">Forgot your password?</string>
+    <string name="app_usuario">User</string>
+    <string name="app_restaurante">Restaurant</string>
+    <string name="app_nome">Name</string>
+    <string name="app_cadastro">Register</string>
+    <string name="app_rsocial">Company name</string>
+    <string name="app_cnpj">CNPJ</string>
+    <string name="app_tel">Telephone</string>
+    <string name="app_estado">Country</string>
+    <string name="app_cidade">City</string>
+    <string name="app_end">Streets</string>
+    <string name="app_numero">Number</string>
+    <string name="app_especialidade">Speciality</string>
+    <string name="app_mesa">Clear Tables</string>
+    <string name="app_fila">Monitor Queue</string>
+    <string name="app_horario">Schedule: 00am - 00pm</string>
+    <string name="ERROR_UNEXPECTED">An unexpected error has occurred. Try again later.</string>
+    <string name="restaurantes">Restaurants</string>
+    <string name="fila_de_espera">Queue</string>
+    <string name="perfil">Profile</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+</resources>

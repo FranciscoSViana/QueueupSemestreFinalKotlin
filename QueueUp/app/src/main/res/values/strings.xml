@@ -5,13 +5,10 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-
-    <string name="home_second">Home Second</string>
 
     // MainActivity - Login
 
@@ -35,7 +32,7 @@
     <string name="app_numero">Numero</string>
     <string name="app_especialidade">Especialidade</string>
     //Main reustaurante
-    <string name="app_mesa">liberar Mesas</string>
+    <string name="app_mesa">Liberar Mesas</string>
     <string name="app_fila">Monitorar Fila</string>
     <string name="app_horario">Horário: 00am-00pm</string>
 
@@ -55,5 +52,7 @@
         <item>Mesa para 4 pessoas</item>
         <item>Mesa para 6 pessoas</item>
     </string-array>
+    <string name="action_settings">Configurações</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
 
 </resources>
