@@ -33,27 +33,27 @@
             app:cardCornerRadius="10dp">
 
             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_vecto_restaurante" />
+
+            <TextView
+                android:id="@+id/tvModalRestaurante"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="@color/colorPrimaryDark">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/ic_vecto_restaurante" />
-
-                <TextView
-                    android:id="@+id/tvModalRestaurante"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:padding="5dp"
-                    android:text="@string/app_restaurante"
-                    android:textColor="#AD000000"
-                    android:textSize="16sp" />
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:text="@string/app_restaurante"
+                android:textColor="#AD000000"
+                android:textSize="16sp" />
+        </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView

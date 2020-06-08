@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navigationRestaurant"
+        android:title="@string/restaurantes"
+        android:icon="@drawable/ic_home_restaurantes"/>
+    <item android:id="@+id/navigationFila"
+        android:title="@string/fila_de_espera"
+        android:icon="@drawable/ic_fila_espera"/>
+    <item android:id="@+id/navigationPerfil"
+        android:title="@string/perfil"
+        android:icon="@drawable/ic_perfil"/>
+
+</menu>
