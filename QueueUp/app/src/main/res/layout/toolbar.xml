@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryToolbar"
+    android:elevation="4dp"
+    android:id="@+id/toolbar_userhomepage"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:title="QueueUp"
+    app:menu="@menu/activity_main_drawer">
+</com.google.android.material.appbar.MaterialToolbar>

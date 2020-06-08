@@ -3,4 +3,5 @@
     <color name="colorPrimary">#DEDEDE</color>
     <color name="colorPrimaryDark">#F4EEEE</color>
     <color name="colorAccent">#24AE60</color>
+    <color name="colorPrimaryToolbar">#FFFFFF</color>
 </resources>

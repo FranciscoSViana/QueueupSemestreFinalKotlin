@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.queueup.view.FilaInfo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarFila">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryToolbar"
+            android:elevation="4dp"
+            app:title="Fila"
+            app:navigationIcon="@drawable/ic_chevron">
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@+id/toolbarFila"
+        android:id="@+id/id_layoutImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/mesas"
+        android:alpha="0.65">
+
+        <TextView
+            android:id="@+id/tv_selecionarmesa"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecionar Mesa"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:textAlignment="center">
+        </TextView>
+
+        <Spinner
+            android:layout_below="@+id/tv_selecionarmesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_fila"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/id_layoutImage"
+        android:id="@+id/tv_filatempo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Tempo de espera estimado"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_filatempo"
+        android:id="@+id/tv_minutos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="17sp"
+        android:text="17 Minutos"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <View
+        android:id="@+id/v_linha_fila"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="#45000000"
+        android:elevation="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_minutos"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/v_linha_fila"
+        android:id="@+id/tv_taxa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="15sp"
+        android:text="Taxa de conveniência"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_taxa"
+        android:id="@+id/tv_taxaValor_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="17sp"
+        android:text="9.90"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:autoSizeMaxTextSize="17dp"
+        android:textAlignment="center"/>
+    <Button
+        android:id="@+id/bt_fila"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorAccent"
+        android:text="Continuar"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
