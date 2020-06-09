@@ -23,9 +23,51 @@ class RegisterRestaurantViewModel(application: Application) : AndroidViewModel(a
     fun create(restaurant: RestaurantHeaderModel) {
         mRestaurantRepository.create(restaurant, object : APIRestaurantListener {
             override fun onSuccess(modelRestaurant: RestaurantHeaderModel) {
+
+                modelRestaurant.name?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_NAME,
+                        it
+                    )
+                }
                 modelRestaurant.cnpj?.let {
                     mSharedPreferences.store(
                         TaskConstants.SHAREDRESTAURANT.CNPJ_KEY, it
+                    )
+                }
+                modelRestaurant.city?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_CITY, it
+                    )
+                }
+                modelRestaurant.state?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_STATE, it
+                    )
+                }
+                modelRestaurant.district?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_DISTRICT, it
+                    )
+                }
+                modelRestaurant.street?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_STREET, it
+                    )
+                }
+                modelRestaurant.number?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_NUMBER, it
+                    )
+                }
+                modelRestaurant.cep?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_CEP, it
+                    )
+                }
+                modelRestaurant.telephone?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_TELEPHONE, it
                     )
                 }
                 modelRestaurant.password?.let {
@@ -33,12 +75,17 @@ class RegisterRestaurantViewModel(application: Application) : AndroidViewModel(a
                         TaskConstants.SHAREDRESTAURANT.PASSWORD_CNPJ, it
                     )
                 }
-                modelRestaurant.name?.let {
+                modelRestaurant.type?.let {
                     mSharedPreferences.store(
-                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_NAME,
-                        it
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_TYPE, it
                     )
                 }
+                modelRestaurant.capacity?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.RESTAURANT_CAPACITY, it.toString()
+                    )
+                }
+
 
                 mCreate.value = ValidationListener()
             }

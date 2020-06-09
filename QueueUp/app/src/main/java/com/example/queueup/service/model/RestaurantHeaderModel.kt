@@ -10,19 +10,34 @@ class RestaurantHeaderModel(
     @SerializedName("cnpj")
     var cnpj: String?,
 
-    @SerializedName("senha")
-    var password: String?,
+    @SerializedName("cidade")
+    var city: String?,
 
-    @SerializedName("endereco")
-    var endereco: EnderecoHeaderModel?,
+    @SerializedName("estado")
+    var state: String?,
+
+    @SerializedName("bairro")
+    var district: String?,
+
+    @SerializedName("logradouro")
+    var street: String?,
+
+    @SerializedName("numEndereco")
+    var number: String?,
+
+    @SerializedName("cep")
+    var cep: String?,
 
     @SerializedName("telefoneRestaurante")
     var telephone: String?,
 
+    @SerializedName("senha")
+    var password: String?,
+
     @SerializedName("tipo")
-    var tipo: String?,
+    var type: String?,
 
     @SerializedName("capacidade")
-    var capacidade: MesaHeaderModel?
+    var capacity: Integer?
 
 )
