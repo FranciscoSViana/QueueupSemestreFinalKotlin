@@ -42,7 +42,7 @@ class RegisterRestaurantActivity : AppCompatActivity(), View.OnClickListener {
             val number = numero.text.toString()
             val password = senha.text.toString()
             val especialidade = especialidade.text.toString()
-            val endereco = EnderecoHeaderModel(city, country, streets, number, cep)
+            val endereco = EnderecoHeaderModel(city, country, bairro, streets, number, cep)
             val restaurante =
                 RestaurantHeaderModel(
                     razaoSocial,

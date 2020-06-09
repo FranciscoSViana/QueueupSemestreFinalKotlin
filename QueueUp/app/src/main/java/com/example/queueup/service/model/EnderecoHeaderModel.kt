@@ -10,12 +10,13 @@ class EnderecoHeaderModel(
     @SerializedName("estado")
     var country: String?,
 
+    var bairro: String?,
+
     @SerializedName("logradouro")
     var streets: String?,
 
     @SerializedName("numEndereco")
     var number: String?,
-
     @SerializedName("cep")
     var cep: String?
 )

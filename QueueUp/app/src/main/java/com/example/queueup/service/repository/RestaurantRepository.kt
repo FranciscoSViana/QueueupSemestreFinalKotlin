@@ -51,7 +51,13 @@ class RestaurantRepository(val context: Context) {
                 call: Call<RestaurantHeaderModel>,
                 response: Response<RestaurantHeaderModel>
             ) {
-                TODO("Not yet implemented")
+                if (response.code() != TaskConstants.HTTP.SUCCESS) {
+                    val validation =
+                        Gson().fromJson(response.errorBody()!!.string(), String::class.java)
+                    listener.onFailure(validation)
+                } else {
+                    response.body()?.let { listener.onSuccess(it) }
+                }
             }
 
         })

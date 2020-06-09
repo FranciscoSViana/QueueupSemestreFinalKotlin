@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.queueup.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/hello_blank_fragment"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
