@@ -50,7 +50,7 @@
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/login_edit_background"
                 android:hint="@string/app_cnpj"
-                android:inputType="text"
+                android:inputType="number"
                 android:padding="10dp"
                 android:textColor="#AD000000"
                 android:textColorHint="#AD000000" />
@@ -168,6 +168,20 @@
                 android:textColorHint="#AD000000" />
 
             <EditText
+                android:id="@+id/capacidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/login_edit_background"
+                android:hint="@string/app_capacidade"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#AD000000"
+                android:textColorHint="#AD000000" />
+
+            <EditText
                 android:id="@+id/senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -176,7 +190,7 @@
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/login_edit_background"
                 android:hint="@string/app_senha"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:padding="10dp"
                 android:textColor="#AD000000"
                 android:textColorHint="#AD000000" />

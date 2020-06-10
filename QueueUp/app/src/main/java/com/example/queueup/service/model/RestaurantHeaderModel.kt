@@ -38,6 +38,6 @@ class RestaurantHeaderModel(
     var type: String?,
 
     @SerializedName("capacidade")
-    var capacity: Integer?
+    var capacity: String
 
 )

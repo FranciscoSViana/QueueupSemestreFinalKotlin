@@ -40,7 +40,10 @@ class RestaurantRepository(val context: Context) {
         })
     }
 
-    fun create(restaurant: RestaurantHeaderModel, listener: APIRestaurantListener) {
+    fun create(
+        restaurant: RestaurantHeaderModel,
+        listener: APIRestaurantListener
+    ) {
         val call: Call<RestaurantHeaderModel> = mRemote.createRestaurant(restaurant)
         call.enqueue(object : Callback<RestaurantHeaderModel> {
             override fun onFailure(call: Call<RestaurantHeaderModel>, t: Throwable) {
@@ -52,8 +55,8 @@ class RestaurantRepository(val context: Context) {
                 response: Response<RestaurantHeaderModel>
             ) {
                 if (response.code() != TaskConstants.HTTP.SUCCESS) {
-                    val validation =
-                        Gson().fromJson(response.errorBody()!!.string(), String::class.java)
+                    val validation = response.errorBody()!!.string()
+                    //Gson().fromJson(, String::class.java)
                     listener.onFailure(validation)
                 } else {
                     response.body()?.let { listener.onSuccess(it) }

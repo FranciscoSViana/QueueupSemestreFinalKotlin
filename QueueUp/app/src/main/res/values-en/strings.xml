@@ -19,6 +19,7 @@
     <string name="app_end">Streets</string>
     <string name="app_numero">Number</string>
     <string name="app_especialidade">Speciality</string>
+    <string name="app_capacidade">Capacity</string>
     <string name="app_mesa">Clear Tables</string>
     <string name="app_fila">Monitor Queue</string>
     <string name="app_horario">Schedule: 00am - 00pm</string>

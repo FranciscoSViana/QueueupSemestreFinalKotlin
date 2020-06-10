@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.queueup.R
-import com.example.queueup.service.model.EnderecoHeaderModel
 import com.example.queueup.service.model.RestaurantHeaderModel
 import com.example.queueup.viewmodel.RegisterRestaurantViewModel
 import kotlinx.android.synthetic.main.activity_register_restaurant.*
@@ -35,27 +34,31 @@ class RegisterRestaurantActivity : AppCompatActivity(), View.OnClickListener {
             val cnpj = cnpj.text.toString()
             val telefone = telefone.text.toString()
             val cep = cep.text.toString()
-            val country = estado.text.toString()
+            val state = estado.text.toString()
             val city = cidade.text.toString()
-            val bairro = bairro.text.toString()
+            val district = bairro.text.toString()
             val streets = endereco.text.toString()
             val number = numero.text.toString()
-            val password = senha.text.toString()
             val especialidade = especialidade.text.toString()
-            val endereco = EnderecoHeaderModel(city, country, bairro, streets, number, cep)
-            val restaurante =
-                RestaurantHeaderModel(
-                    razaoSocial,
-                    cnpj,
-                    password,
-                    endereco,
-                    telefone,
-                    especialidade,
-                    null
-                )
+            val capacidade = capacidade.text.toString()
+            val password = senha.text.toString()
+            val restaurant = RestaurantHeaderModel(
+                razaoSocial,
+                cnpj,
+                city,
+                state,
+                district,
+                streets,
+                number,
+                cep,
+                telefone,
+                password,
+                especialidade,
+                capacidade
+            )
 
 
-            mViewModel.create(restaurante)
+            mViewModel.create(restaurant)
 
         }
     }

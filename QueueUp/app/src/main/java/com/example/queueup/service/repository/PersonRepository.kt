@@ -23,7 +23,10 @@ class PersonRepository(val context: Context) {
                 listener.onFailure(context.getString(R.string.ERROR_UNEXPECTED))
             }
 
-            override fun onResponse(call: Call<PersonHeaderModel>, response: Response<PersonHeaderModel>) {
+            override fun onResponse(
+                call: Call<PersonHeaderModel>,
+                response: Response<PersonHeaderModel>
+            ) {
                 if (response.code() != TaskConstants.HTTP.SUCCESS) {
                     val validation =
                         Gson().fromJson(response.errorBody()!!.toString(), String::class.java)
@@ -44,10 +47,13 @@ class PersonRepository(val context: Context) {
                 listener.onFailure(context.getString(R.string.ERROR_UNEXPECTED))
             }
 
-            override fun onResponse(call: Call<PersonHeaderModel>, response: Response<PersonHeaderModel>) {
+            override fun onResponse(
+                call: Call<PersonHeaderModel>,
+                response: Response<PersonHeaderModel>
+            ) {
                 if (response.code() != TaskConstants.HTTP.SUCCESS) {
-                    val validation =response.errorBody()!!.string()
-                       // Gson().fromJson(, String::class.java)
+                    val validation =
+                        Gson().fromJson(response.errorBody()!!.string(), String::class.java)
                     listener.onFailure(validation)
                 } else {
                     response.body()?.let { listener.onSuccess(it) }
