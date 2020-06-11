@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     private fun observe() {
         mViewModel.login.observe(this, Observer {
             if (it.success()) {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, UserHomePageActivity::class.java))
             } else {
                 val message = it.failure()
                 Toast.makeText(this, message, Toast.LENGTH_LONG).show()
@@ -62,7 +62,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         mViewModel.loggedUser.observe(this, Observer {
             if (it) {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, UserHomePageActivity::class.java))
             }
         })
     }
