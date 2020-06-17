@@ -1,6 +1,8 @@
 package com.example.queueup.service.repository.remote
 
 import com.example.queueup.service.model.RestaurantHeaderModel
+import feign.Param
+import feign.RequestLine
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Field
@@ -20,4 +22,6 @@ interface RestaurantService {
     fun createRestaurant(
         @Body restaurant: RestaurantHeaderModel
     ): Call<RestaurantHeaderModel>
+
+
 }

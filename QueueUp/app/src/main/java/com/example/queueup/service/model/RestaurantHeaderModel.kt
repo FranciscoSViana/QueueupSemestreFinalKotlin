@@ -1,7 +1,9 @@
 package com.example.queueup.service.model
 
+import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "tb_restaurante")
 class RestaurantHeaderModel(
 
     @SerializedName("nome")

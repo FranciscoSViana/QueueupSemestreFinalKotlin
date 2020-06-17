@@ -16,7 +16,7 @@ class RestaurantRepository(val context: Context) {
 
     private val mRemote = RetrofitClient.createService(RestaurantService::class.java)
 
-    fun login(cnpj: String, password: String, listener: APIRestaurantListener) {
+    fun login(cnpj: String, password: String, listener: APIRestaurantListener<Any?>) {
         val call: Call<RestaurantHeaderModel> = mRemote.loginRestaurant(cnpj, password)
         call.enqueue(object : Callback<RestaurantHeaderModel> {
             override fun onFailure(call: Call<RestaurantHeaderModel>, t: Throwable) {
@@ -42,7 +42,7 @@ class RestaurantRepository(val context: Context) {
 
     fun create(
         restaurant: RestaurantHeaderModel,
-        listener: APIRestaurantListener
+        listener: APIRestaurantListener<Any?>
     ) {
         val call: Call<RestaurantHeaderModel> = mRemote.createRestaurant(restaurant)
         call.enqueue(object : Callback<RestaurantHeaderModel> {

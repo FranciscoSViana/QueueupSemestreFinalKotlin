@@ -23,7 +23,7 @@ class RegisterRestaurantViewModel(application: Application) : AndroidViewModel(a
     fun create(restaurant: RestaurantHeaderModel) {
         mRestaurantRepository.create(
             restaurant,
-            object : APIRestaurantListener {
+            object : APIRestaurantListener<Any?> {
                 override fun onSuccess(modelRestaurant: RestaurantHeaderModel) {
                     modelRestaurant.name?.let {
                         mSharedPreferences.store(

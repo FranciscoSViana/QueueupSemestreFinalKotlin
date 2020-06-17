@@ -23,7 +23,7 @@ class LoginRestViewModel(application: Application) : AndroidViewModel(applicatio
     val loggedRest: LiveData<Boolean> = mLoggedRest
 
     fun doLoginRest(cnpj: String, password: String) {
-        mRestaurantRepository.login(cnpj, password, object : APIRestaurantListener {
+        mRestaurantRepository.login(cnpj, password, object : APIRestaurantListener<Any?> {
             override fun onSuccess(modelRestaurant: RestaurantHeaderModel) {
                 modelRestaurant.cnpj?.let {
                     mSharedPreferences.store(
