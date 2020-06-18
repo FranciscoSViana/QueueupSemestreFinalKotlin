@@ -28,6 +28,7 @@ class RestAdapter(private val restaurantes: MutableList<RestaurantHeaderModel>) 
         fun bind(restaurante: RestaurantHeaderModel) {
             with(restaurante) {
                 itemView.tv_restaurante_nome.text = name
+                itemView.tv_restaurante_tipo.text = type
             }
         }
     }

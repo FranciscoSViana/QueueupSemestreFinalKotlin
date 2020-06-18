@@ -46,6 +46,7 @@ class RestaurantListActivity : AppCompatActivity() {
         val str = mSharedPreferences.get()
         Log.d("nome: ", str)
         viewModel.getRestaurante(str)
+        viewModel.all()
 //
 //        recyclerView = findViewById(R.id.id_recyclerview)
 //        gridLayoutManager = GridLayoutManager(

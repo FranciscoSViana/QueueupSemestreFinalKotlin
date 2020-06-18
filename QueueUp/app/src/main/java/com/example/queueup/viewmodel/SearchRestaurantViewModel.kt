@@ -57,4 +57,42 @@ class SearchRestaurantViewModel : ViewModel() {
             })
     }
 
+    fun all() {
+        RetrofitClient.createService(SpecialityService::class.java).all()
+            .enqueue(object : Callback<List<RestaurantHeaderModel>> {
+                override fun onFailure(call: Call<List<RestaurantHeaderModel>>, t: Throwable) {
+                    TODO("Not yet implemented")
+                }
+
+                override fun onResponse(
+                    call: Call<List<RestaurantHeaderModel>>,
+                    response: Response<List<RestaurantHeaderModel>>
+                ) {
+                    if (response.isSuccessful) {
+                        val restaurantes: MutableList<RestaurantHeaderModel> = mutableListOf()
+                        response.body()?.let {
+                            for (result in it) {
+                                val restaurante = RestaurantHeaderModel(
+                                    name = result.name,
+                                    cnpj = result.cnpj,
+                                    city = result.city,
+                                    state = result.state,
+                                    district = result.district,
+                                    street = result.street,
+                                    number = result.number,
+                                    cep = result.cep,
+                                    telephone = result.telephone,
+                                    password = result.password,
+                                    type = result.type
+                                )
+                                restaurantes.add(restaurante)
+                            }
+                        }
+                        restaurants.value = restaurantes
+                    }
+                }
+
+            })
+    }
+
 }

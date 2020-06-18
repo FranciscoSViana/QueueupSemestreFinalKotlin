@@ -1,49 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="10dp"
-    app:cardUseCompatPadding="true"
-    app:cardPreventCornerOverlap="true">
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:padding="12dp" >
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="12dp">
 
         <!--    Ideal seria puxar imagem, nome e endereco do banco de dados    -->
         <ImageView
             android:id="@+id/imagemRestaurante"
-            android:src="@drawable/america"
             android:layout_width="100dp"
-            android:layout_height="90dp" />
+            android:layout_height="90dp"
+            android:src="@drawable/america" />
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_marginLeft="12dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/nomeRestaurante"
-                android:text="America - Alameda Santos"
-                android:textSize="18sp"
-                android:textColor="#4a4a4a"
                 android:layout_width="230dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="America - Alameda Santos"
+                android:textColor="#4a4a4a"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/culinariaRestaurante"
-                android:text="Gastronomia Paulistana"
-                android:textSize="18sp"
-                android:textColor="#bebebe"
                 android:layout_width="230dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Gastronomia Paulistana"
+                android:textColor="#bebebe"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/distanciaRestaurante"
@@ -55,32 +54,26 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_marginTop="5dp"
                     android:id="@+id/bolinha"
-                    android:src="@drawable/bolinhaamarela"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/bolinhaamarela" />
 
                 <TextView
+                    android:id="@+id/tempoFila"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/tempoFila"
-                    android:text="30 minutos"
+                    android:layout_marginLeft="5dp"
                     android:layout_toRightOf="@+id/bolinha"
-                    android:layout_marginLeft="5dp" />
+                    android:text="30 minutos" />
 
             </RelativeLayout>
 
         </LinearLayout>
-
-
-
-
-
-
 
 
     </LinearLayout>
