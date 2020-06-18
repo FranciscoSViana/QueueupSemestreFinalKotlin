@@ -13,6 +13,6 @@ interface SpecialityService {
     @GET("restaurantes")
     fun list(): List<RestaurantHeaderModel>
 
-    @GET("restaurantes/{tipo}")
-    fun listType(@Path(value = "tipo", encoded = true) type: String): Call<RestaurantHeaderModel>
+    @GET("restaurantes/especialidades/{tipo}")
+    fun listType(@Path(value = "tipo", encoded = true) type: String?): Call<List<RestaurantHeaderModel>>
 }

@@ -6,24 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".view.RestaurantListActivity">
 
-    <include layout="@layout/toolbar"
-        android:id="@+id/toolbar2">
-    </include>
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/toolbar"></include>
 
     <ScrollView
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        app:layout_constraintBottom_toTopOf="@+id/layout_btmenu2"
         android:id="@+id/id_scrollview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         android:padding="10dp"
-        android:layout_marginTop="10dp" >
+        app:layout_constraintBottom_toTopOf="@+id/layout_btmenu2"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/id_recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
 
     </ScrollView>
 
@@ -33,11 +33,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent">
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:background="@color/colorPrimaryToolbar"
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryToolbar"
             app:menu="@menu/bottom_navigation" />
     </LinearLayout>
 

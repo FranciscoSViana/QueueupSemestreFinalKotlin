@@ -91,12 +91,12 @@ class RegisterRestaurantViewModel(application: Application) : AndroidViewModel(a
                             it
                         )
                     }
-                    modelRestaurant.capacity?.let {
-                        mSharedPreferences.store(
-                            TaskConstants.SHAREDRESTAURANT.RESTAURANT_CAPACITY,
-                            it.toString()
-                        )
-                    }
+//                    modelRestaurant.capacity?.let {
+//                        mSharedPreferences.store(
+//                            TaskConstants.SHAREDRESTAURANT.RESTAURANT_CAPACITY,
+//                            it.toString()
+//                        )
+//                    }
                     mCreate.value = ValidationListener()
                 }
 

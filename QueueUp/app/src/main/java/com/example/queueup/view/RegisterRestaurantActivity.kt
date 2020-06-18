@@ -40,7 +40,8 @@ class RegisterRestaurantActivity : AppCompatActivity(), View.OnClickListener {
             val streets = endereco.text.toString()
             val number = numero.text.toString()
             val especialidade = especialidade.text.toString()
-            val capacidade = capacidade.text.toString()
+            val quantidade = capacidade.text
+            val numero = quantidade.toString().toInt()
             val password = senha.text.toString()
             val restaurant = RestaurantHeaderModel(
                 razaoSocial,
@@ -53,8 +54,8 @@ class RegisterRestaurantActivity : AppCompatActivity(), View.OnClickListener {
                 cep,
                 telefone,
                 password,
-                especialidade,
-                capacidade
+                especialidade
+                //capacidade
             )
 
 

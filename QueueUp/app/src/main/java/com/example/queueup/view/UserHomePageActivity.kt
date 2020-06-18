@@ -11,9 +11,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.queueup.R
 import com.example.queueup.adapters.AlphaAdapters
+import com.example.queueup.service.model.RestaurantHeaderModel
 import com.example.queueup.viewmodel.AlphaChar
 import com.example.queueup.viewmodel.RegisterRestaurantViewModel
+import com.example.queueup.viewmodel.SearchRestaurantViewModel
 import com.example.queueup.viewmodel.UserHomePageViewModel
+import kotlinx.android.synthetic.main.activity_user_home_page.*
 
 class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
     private var recyclerView: RecyclerView? = null
@@ -41,7 +44,9 @@ class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
         alphaAdapters = AlphaAdapters(applicationContext, arrayList!!)
         recyclerView?.adapter = alphaAdapters
 
-        mViewModel.listSpecialities()
+
+
+        //mViewModel.listSpecialities()
     }
 
     private fun setDataInList(): ArrayList<AlphaChar> {

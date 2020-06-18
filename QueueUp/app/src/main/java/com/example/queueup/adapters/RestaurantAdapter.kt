@@ -13,7 +13,7 @@ import com.example.queueup.R
 import com.example.queueup.view.RestaurantDetailsActivity
 import com.example.tasks.ItemRestaurante
 
-class RestauranteAdapter(var context: Context, var arrayList: ArrayList<ItemRestaurante>) :
+class RestauranteAdapter(var context: Context, var arrayList: MutableList<ItemRestaurante>) :
     RecyclerView.Adapter<RestauranteAdapter.ItemHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {

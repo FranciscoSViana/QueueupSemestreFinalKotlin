@@ -37,9 +37,9 @@ class RestaurantHeaderModel(
     var password: String?,
 
     @SerializedName("tipo")
-    var type: String?,
+    var type: String?
 
-    @SerializedName("capacidade")
-    var capacity: String
+//    @SerializedName("capacidade")
+//    var capacity: String
 
 )
