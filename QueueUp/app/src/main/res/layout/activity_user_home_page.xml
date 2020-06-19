@@ -32,12 +32,6 @@
         app:layout_constraintBottom_toTopOf="@+id/sc_conteudo"
         app:layout_constraintTop_toBottomOf="@+id/tv_localizacao" />
 
-    <Button
-        android:id="@+id/button_teste"
-        app:layout_constraintTop_toBottomOf="@id/v_linha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="teste"/>
 
     <ScrollView
         android:id="@+id/sc_conteudo"

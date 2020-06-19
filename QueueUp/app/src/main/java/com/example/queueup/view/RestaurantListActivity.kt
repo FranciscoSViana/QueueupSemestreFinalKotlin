@@ -4,16 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.queueup.R
 import com.example.queueup.adapters.RestAdapter
-import com.example.queueup.adapters.RestauranteAdapter
 import com.example.queueup.service.model.RestaurantHeaderModel
-import com.example.queueup.service.repository.local.SecurityPreferences
 import com.example.queueup.utils.SaveData
 import com.example.queueup.viewmodel.SearchRestaurantViewModel
 import com.example.tasks.ItemRestaurante
@@ -38,7 +33,7 @@ class RestaurantListActivity : AppCompatActivity() {
                 with(id_recyclerview) {
                     layoutManager =
                         LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
-                    adapter = RestAdapter(restaurante as MutableList<RestaurantHeaderModel>)
+                    adapter = RestAdapter(context,restaurante as MutableList<RestaurantHeaderModel>)
                 }
             }
         })

@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 interface SpecialityService {
 
-    @GET("restaurantes")
+    @GET("restaurantes/especialidades")
     fun all(): Call<List<RestaurantHeaderModel>>
 
     @GET("restaurantes")
