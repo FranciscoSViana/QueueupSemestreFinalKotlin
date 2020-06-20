@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.queueup.view.QueueTimeActivity">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+    </include>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toTopOf="@+id/layout_btmenu"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/posicao_fila"
+        android:text="0"
+        android:textSize="60sp"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center_horizontal"
+        />
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/queuetime"/>
+<!--    Necessita mudar o texto conforme a posição-->
+    <TextView
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_textofila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nenhuma fila em andamento "
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_textofilainfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Que tal experimentar um lugar novo?\nÉ só selecionar Restaurantes"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_btmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryToolbar"
+            app:menu="@menu/bottom_navigation" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
