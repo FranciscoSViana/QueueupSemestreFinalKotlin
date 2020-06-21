@@ -16,6 +16,7 @@ import com.example.queueup.viewmodel.AlphaChar
 import com.example.queueup.viewmodel.RegisterRestaurantViewModel
 import com.example.queueup.viewmodel.SearchRestaurantViewModel
 import com.example.queueup.viewmodel.UserHomePageViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_user_home_page.*
 
 class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
@@ -30,7 +31,28 @@ class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_home_page)
+        //configurações do menu
         setSupportActionBar(findViewById(R.id.toolbar_userhomepage))
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation).also {
+            it.selectedItemId = R.id.navigationRestaurant
+        }
+
+        bottomNavigationView.setOnNavigationItemSelectedListener{
+            when (it.itemId){
+                R.id.navigationFila -> {
+                    val intent = Intent(this, QueueTimeActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.navigationRestaurant ->{
+                    val intent2 = Intent(this, UserHomePageActivity::class.java)
+                    startActivity(intent2)
+                    true
+                }
+                else -> false
+            }
+        }
+
 
         mViewModel = ViewModelProvider(this).get(UserHomePageViewModel::class.java)
 
@@ -84,6 +106,8 @@ class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 }
+
+
 
 
 
