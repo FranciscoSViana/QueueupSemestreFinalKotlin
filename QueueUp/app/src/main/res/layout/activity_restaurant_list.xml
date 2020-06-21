@@ -8,9 +8,7 @@
 
     <include
         android:id="@+id/toolbar2"
-        layout="@layout/toolbar">
-
-    </include>
+        layout="@layout/toolbar"></include>
 
     <ScrollView
         android:id="@+id/id_scrollview"
@@ -18,20 +16,20 @@
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/layout_btmenu"
+        app:layout_constraintBottom_toTopOf="@+id/layout_btmenu2"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/id_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
-
-        </androidx.recyclerview.widget.RecyclerView>
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
 
     </ScrollView>
+
+
     <LinearLayout
-        android:id="@+id/layout_btmenu"
+        android:id="@+id/layout_btmenu2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -43,9 +41,5 @@
             android:background="@color/colorPrimaryToolbar"
             app:menu="@menu/bottom_navigation" />
     </LinearLayout>
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
