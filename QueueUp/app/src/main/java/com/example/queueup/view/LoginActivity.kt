@@ -3,11 +3,8 @@ package com.example.queueup.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.widget.ImageView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.queueup.R
@@ -37,19 +34,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             handleLogin()
         } else if (v.id == R.id.button_register) {
             startActivity(Intent(this, RegisterOptionActivity::class.java))
-
-            //Para aparecer o modal
-            /* val mDialogView = LayoutInflater.from(this).inflate(R.layout.modal_queuetime, null);
-             val mBuilder = AlertDialog.Builder(this)
-                 .setView(mDialogView)
-             //show dialog
-             val mAlertDialog = mBuilder.show()
-             //close modal
-             val close: ImageView = mDialogView.findViewById(R.id.imgExit)
-             close.setOnClickListener{
-                 mAlertDialog.dismiss()
-             }*/
-
         }
     }
 
