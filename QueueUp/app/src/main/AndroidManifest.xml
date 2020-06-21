@@ -14,7 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.CardViewRestaurantActivity"></activity>
+        <activity android:name=".view.QueueTimeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".view.CardViewRestaurantActivity" />
         <activity android:name=".view.RestaurantDetailsActivity" />
         <activity android:name=".view.RestaurantListActivity" />
         <activity android:name="com.example.tasks.Inserirnumero" />
