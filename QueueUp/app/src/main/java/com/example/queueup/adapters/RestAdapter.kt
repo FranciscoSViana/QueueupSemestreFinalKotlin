@@ -1,19 +1,17 @@
 package com.example.queueup.adapters
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.queueup.R
 import com.example.queueup.service.model.RestaurantHeaderModel
-import com.example.queueup.view.RestaurantDetailsActivity
-import kotlinx.android.synthetic.main.card_restaurante.view.*
+import com.example.queueup.view.RestaurantListActivity
 
 class RestAdapter(
-    val context: Context,
-    private val restaurantes: MutableList<RestaurantHeaderModel>
+    var restaurantes: MutableList<RestaurantHeaderModel>,
+    var clickListener: RestaurantListActivity
 ) :
     RecyclerView.Adapter<RestAdapter.RestViewHolder>() {
 
@@ -28,22 +26,33 @@ class RestAdapter(
     override fun getItemCount(): Int = restaurantes.size
 
     override fun onBindViewHolder(holder: RestViewHolder, position: Int) {
-        holder.bind(restaurantes[position])
-        holder.itemView.setOnClickListener {
-            context.startActivity(Intent(context, RestaurantDetailsActivity::class.java))
-        }
+        holder.bind(restaurantes.get(position), clickListener)
+//        holder.itemView.setOnClickListener {
+//            context.startActivity(Intent(context, RestaurantDetailsActivity::class.java))
+//        }
 
 
     }
 
-    inner class RestViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(restaurante: RestaurantHeaderModel) {
-            with(restaurante) {
-                itemView.tv_restaurante_nome.text = name
-                itemView.tv_restaurante_tipo.text = type
+    class RestViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var nomeRest = itemView.findViewById<TextView>(R.id.tv_restaurante_nome)
+        var tipoRest = itemView.findViewById<TextView>(R.id.tv_restaurante_tipo)
 
+
+        fun bind(restaurante: RestaurantHeaderModel, action: OnClickItem) {
+            with(restaurante) {
+                nomeRest.text = restaurante.name
+                tipoRest.text = restaurante.type
+
+                itemView.setOnClickListener {
+                    action.onItemClick(restaurante, adapterPosition)
+                }
 
             }
         }
+    }
+
+    interface OnClickItem {
+        fun onItemClick(restaurante: RestaurantHeaderModel, position: Int)
     }
 }

@@ -5,20 +5,36 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.queueup.R
+import kotlinx.android.synthetic.main.activity_restaurant_details.*
 
-class RestaurantDetailsActivity : AppCompatActivity(), View.OnClickListener {
+class RestaurantDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant_details)
-    }
 
-    override fun onClick(v: View) {
-        if (v.id == R.id.entrarFila) {
+        val nomeRest = intent.extras!!.getString("nomeRest")
+        tituloRestaurante.text = nomeRest
+        val tipoRest = intent.extras!!.getString("tipoRest")
+        tipoCulinaria.text = tipoRest
+        val telRest = intent.extras!!.getString("telRest")
+        telefoneRestaurante.text = telRest
+        val logRest = intent.extras!!.getString("logRest")
+        val numRest = intent.extras!!.getString("numRest")
+        val bairroRest = intent.extras!!.getString("bairroRest")
+        val cidadeRest = intent.extras!!.getString("cidadeRest")
+        val estadoRest = intent.extras!!.getString("estadoRest")
+        enderecoRestaurante.text = "${logRest} ${numRest} - ${bairroRest} ${cidadeRest}/${estadoRest}"
+
+        entrarFila.setOnClickListener {
             startActivity(Intent(this, FilaInfo::class.java))
         }
-//        else
-////            if (v.id == R.id.cancelar) {
-////            startActivity(Intent(this, RestaurantListActivity::class.java))
-////        }
+
+        cancelar.setOnClickListener {
+            startActivity(Intent(this, RestaurantListActivity::class.java))
+            finish()
+        }
+
     }
+
+
 }

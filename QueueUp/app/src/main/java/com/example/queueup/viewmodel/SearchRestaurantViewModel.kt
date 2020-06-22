@@ -15,11 +15,13 @@ class SearchRestaurantViewModel : ViewModel() {
 
     val restaurants: MutableLiveData<List<RestaurantHeaderModel>> = MutableLiveData()
 
+
+
     fun getRestaurante(str: String?) {
         RetrofitClient.createService(SpecialityService::class.java).listType(str)
             .enqueue(object : Callback<List<RestaurantHeaderModel>> {
                 override fun onFailure(call: Call<List<RestaurantHeaderModel>>, t: Throwable) {
-                    TODO("Not yet implemented")
+
                 }
 
                 override fun onResponse(

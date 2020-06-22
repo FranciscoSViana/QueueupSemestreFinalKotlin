@@ -11,7 +11,7 @@ class FilaInfo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fila_info)
-        setSupportActionBar(findViewById(R.id.toolbarFila))
+//        setSupportActionBar(findViewById(R.id.toolbarFila))
 
         val mySpinner: Spinner = findViewById(R.id.spinner_fila)
         var myArrayAdap: ArrayAdapter<String> = ArrayAdapter<String>(
