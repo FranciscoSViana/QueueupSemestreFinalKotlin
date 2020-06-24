@@ -13,7 +13,8 @@ class QueueTimeActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar_userhomepage))
         //configurações do menu
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation).also {
-            it.selectedItemId = R.id.navigationRestaurant
+            it.selectedItemId = R.id.navigationFila
+
         }
 
         bottomNavigationView.setOnNavigationItemSelectedListener{

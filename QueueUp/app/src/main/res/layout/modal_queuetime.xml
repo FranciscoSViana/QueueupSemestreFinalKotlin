@@ -38,16 +38,40 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vá até o restaurante com o seu QRCode em mãos"
+        android:text="Vá até o restaurante com o seu código em mãos"
         android:textSize="14sp"
         android:layout_gravity="center_horizontal"
         />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="1234567"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:background="@drawable/background_color"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="ou"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal" />
+
     <Button
         android:layout_marginTop="10dp"
         android:layout_margin="10dp"
         android:id="@+id/button_register"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
        android:layout_gravity="center_horizontal"
         android:background="@drawable/login_edit_background"
         android:text="Baixar QRCode"

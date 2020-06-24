@@ -15,6 +15,7 @@ import com.example.queueup.service.model.RestaurantHeaderModel
 import com.example.queueup.utils.SaveData
 import com.example.queueup.viewmodel.SearchRestaurantViewModel
 import com.example.tasks.ItemRestaurante
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_restaurant_list.*
 
 class RestaurantListActivity : AppCompatActivity(), RestAdapter.OnClickItem {
@@ -34,6 +35,28 @@ class RestaurantListActivity : AppCompatActivity(), RestAdapter.OnClickItem {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant_list)
+        setSupportActionBar(findViewById(R.id.toolbar_userhomepage))
+        //configurações do menu
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation).also {
+            it.selectedItemId = R.id.navigationRestaurant
+
+        }
+
+        bottomNavigationView.setOnNavigationItemSelectedListener{
+            when (it.itemId){
+                R.id.navigationFila -> {
+                    val intent = Intent(this, QueueTimeActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.navigationRestaurant ->{
+                    val intent2 = Intent(this, UserHomePageActivity::class.java)
+                    startActivity(intent2)
+                    true
+                }
+                else -> false
+            }
+        }
 
         viewModel = ViewModelProviders.of(this).get(SearchRestaurantViewModel::class.java)
         viewModel.restaurants.observe(this, Observer {
