@@ -20,8 +20,12 @@
 
         </activity>
         <activity android:name=".view.CardViewRestaurantActivity" />
-        <activity android:name=".view.RestaurantDetailsActivity" />
-        <activity android:name=".view.RestaurantListActivity" />
+        <activity android:name=".view.RestaurantDetailsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".view.RestaurantListActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name="com.example.tasks.Inserirnumero" />
         <activity
             android:name=".view.FilaInfo"
@@ -30,13 +34,23 @@
         <activity
             android:name=".view.UserHomePageActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".view.RegisterOptionActivity" />
-        <activity android:name=".view.RegisterRestaurantActivity" />
-        <activity android:name=".view.RegisterUserActivity" />
-        <activity android:name=".view.LoginActivity">
+        <activity android:name=".view.RegisterOptionActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".view.RegisterRestaurantActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".view.RegisterUserActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".view.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -45,5 +59,4 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
-
 </manifest>

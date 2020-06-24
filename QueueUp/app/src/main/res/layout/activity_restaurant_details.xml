@@ -31,7 +31,8 @@
         <RelativeLayout
             android:id="@+id/informacoesRestaurante"
             android:layout_width="match_parent"
-            android:layout_height="120dp">
+            android:layout_height="120dp"
+            android:layout_marginTop="15dp">
 
             //O título do restaurante tem que vir da API
 
@@ -40,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="nome do restaurante"
+                android:text="Nome do restaurante"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -51,7 +52,7 @@
                 android:layout_marginTop="50dp"
                 android:gravity="center"
                 android:text="tipo de comida"
-                android:textSize="17sp"
+                android:textSize="16sp"
                 android:textStyle="normal" />
         </RelativeLayout>
 
@@ -59,7 +60,8 @@
             android:id="@+id/informacoesMapa"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/informacoesRestaurante">
+            android:layout_below="@+id/informacoesRestaurante"
+            android:layout_marginTop="10dp">
 
             <!--      O endereço do restaurante deve vir da API      -->
             <TextView
@@ -68,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_place_black_24dp"
                 android:text="R. Haddock Lobo 425"
-                android:textSize="15dp" />
+                android:textSize="16sp" />
 
             <!--      O telefone do restaurante deve vir da API      -->
             <TextView
@@ -76,10 +78,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/enderecoRestaurante"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:drawableLeft="@drawable/ic_phone_black_24dp"
                 android:text="(00)0000-0000"
-                android:textSize="15dp" />
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,7 +101,7 @@
                     android:text="Entrar na Fila"
                     android:textAllCaps="false"
                     android:textColor="#FFFF"
-                    android:textSize="18dp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <Button
@@ -112,7 +114,7 @@
                     android:text="Cancelar"
                     android:textAllCaps="false"
                     android:textColor="#FFFF"
-                    android:textSize="18dp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
 

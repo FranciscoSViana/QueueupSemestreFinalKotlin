@@ -36,7 +36,6 @@ class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation).also {
             it.selectedItemId = R.id.navigationRestaurant
         }
-
         bottomNavigationView.setOnNavigationItemSelectedListener{
             when (it.itemId){
                 R.id.navigationFila -> {

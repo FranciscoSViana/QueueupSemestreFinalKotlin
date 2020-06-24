@@ -36,10 +36,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         if (v.id == R.id.button_login) {
             handleLogin()
         } else if (v.id == R.id.button_register) {
-            startActivity(Intent(this, RegisterOptionActivity::class.java))
+            //startActivity(Intent(this, RegisterOptionActivity::class.java))
+            startActivity(Intent(this, QueueTimeActivity::class.java))
 
             //Para aparecer o modal
-            /* val mDialogView = LayoutInflater.from(this).inflate(R.layout.modal_queuetime, null);
+             /*val mDialogView = LayoutInflater.from(this).inflate(R.layout.modal_queuetime, null);
              val mBuilder = AlertDialog.Builder(this)
                  .setView(mDialogView)
              //show dialog
