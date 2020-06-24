@@ -151,6 +151,7 @@ class RestaurantListActivity : AppCompatActivity(), RestAdapter.OnClickItem {
         intent.putExtra("estadoRest", restaurante.state)
         intent.putExtra("tipoRest", restaurante.type)
         intent.putExtra("imagemRest", restaurante.imagem)
+        intent.putExtra("logoRest", restaurante.logo)
 
         startActivity(intent)
     }

@@ -27,6 +27,7 @@ class RestaurantDetailsActivity : AppCompatActivity() {
         val cidadeRest = intent.extras!!.getString("cidadeRest")
         val estadoRest = intent.extras!!.getString("estadoRest")
         val imagemRest = intent.extras!!.getString("imagemRest")
+        val logoRest = intent.extras!!.getString("logoRest")
 
         enderecoRestaurante.text =
             "${logRest} ${numRest} - ${bairroRest} ${cidadeRest}/${estadoRest}"
@@ -40,10 +41,10 @@ class RestaurantDetailsActivity : AppCompatActivity() {
             finish()
         }
 
-        println("nome:" + imagemRest)
-        if (imagemRest != null) {
+        println("nome:" + logoRest)
+        if (logoRest != null) {
             Glide.with(this)
-                .load(imagemRest)
+                .load(logoRest)
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .skipMemoryCache(true)

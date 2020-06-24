@@ -55,6 +55,7 @@ class RegisterRestaurantActivity : AppCompatActivity(), View.OnClickListener {
                 telefone,
                 password,
                 especialidade,
+                "",
                 ""
                 //capacidade
             )

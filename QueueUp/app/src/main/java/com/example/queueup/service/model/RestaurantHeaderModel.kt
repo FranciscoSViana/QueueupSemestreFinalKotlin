@@ -40,7 +40,10 @@ class RestaurantHeaderModel(
     var type: String?,
 
     @SerializedName("imagem")
-    var imagem: String?
+    var imagem: String?,
+
+    @SerializedName("logo")
+    var logo: String?
 
 //    @SerializedName("capacidade")
 //    var capacity: String
