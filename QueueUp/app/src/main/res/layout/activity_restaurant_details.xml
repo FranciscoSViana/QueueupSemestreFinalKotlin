@@ -6,17 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".view.RestaurantListActivity">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/iv_imagem_layout"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@drawable/restaurantecover"></RelativeLayout>
+        android:background="@drawable/restaurantecover"/>
 
     //Layout de Cima
 
     <RelativeLayout
         android:id="@+id/layoutTop"
         android:layout_width="match_parent"
-        android:layout_height="150dp"></RelativeLayout>
+        android:layout_height="150dp"/>
 
     //Layout debaixo
 

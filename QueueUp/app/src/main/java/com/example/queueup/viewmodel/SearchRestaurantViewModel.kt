@@ -44,7 +44,8 @@ class SearchRestaurantViewModel : ViewModel() {
                                     cep = result.cep,
                                     telephone = result.telephone,
                                     password = result.password,
-                                    type = result.type
+                                    type = result.type,
+                                    imagem = result.imagem
                                     //arrumar o capacity
                                     //capacity = result.capacity
                                 )
@@ -85,7 +86,8 @@ class SearchRestaurantViewModel : ViewModel() {
                                     cep = result.cep,
                                     telephone = result.telephone,
                                     password = result.password,
-                                    type = result.type
+                                    type = result.type,
+                                    imagem = result.imagem
                                 )
                                 restaurantes.add(restaurante)
                             }
