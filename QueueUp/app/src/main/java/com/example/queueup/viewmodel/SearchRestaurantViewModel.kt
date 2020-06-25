@@ -65,7 +65,7 @@ class SearchRestaurantViewModel : ViewModel() {
         RetrofitClient.createService(SpecialityService::class.java).all()
             .enqueue(object : Callback<List<RestaurantHeaderModel>> {
                 override fun onFailure(call: Call<List<RestaurantHeaderModel>>, t: Throwable) {
-                    TODO("Not yet implemented")
+
                 }
 
                 override fun onResponse(
