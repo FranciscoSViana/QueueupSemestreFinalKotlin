@@ -18,10 +18,10 @@ interface FilaService {
         @Path(value = "restaurante", encoded = true) restaurante: String
     ): Call<List<FilaHeaderModel>>
 
-    @GET("/fila/posicao/{restaurante}/{cliente}")
+    @GET("/fila/posicao/{idRestaurante}/{idCliente}")
     fun atualizaPosicao(
-        @Path(value = "restaurante", encoded = true) restaurante: String,
-        @Path(value = "cliente", encoded = true) cliente: String
+        @Path(value = "idRestaurante", encoded = true) idRestaurante: String,
+        @Path(value = "idCliente", encoded = true) iCliente: String
     ): Call<Int>
 
     @GET("/fila/filaPorRestaurante/{idRestaurante}")

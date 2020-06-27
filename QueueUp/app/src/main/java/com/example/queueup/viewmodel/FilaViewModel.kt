@@ -84,8 +84,8 @@ class FilaViewModel : ViewModel() {
             })
     }
 
-    fun atualizaPosicao(restaurante: String, cliente: String, activity: FilaInfo) {
-        RetrofitClient.createService(FilaService::class.java).atualizaPosicao(restaurante, cliente)
+    fun atualizaPosicao(idRestaurante: String, idCliente: String, activity: FilaInfo) {
+        RetrofitClient.createService(FilaService::class.java).atualizaPosicao(idRestaurante, idCliente)
             .enqueue(object : Callback<Int> {
                 override fun onFailure(call: Call<Int>, t: Throwable) {
 
