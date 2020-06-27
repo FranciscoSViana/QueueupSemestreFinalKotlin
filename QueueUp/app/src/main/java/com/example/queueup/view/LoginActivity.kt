@@ -11,12 +11,14 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.queueup.R
+import com.example.queueup.utils.SaveData
 import com.example.queueup.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mViewModel: LoginViewModel
+    private lateinit var mSharedPreferences: SaveData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,19 +39,19 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             handleLogin()
         } else if (v.id == R.id.button_register) {
             startActivity(Intent(this, RegisterOptionActivity::class.java))
-           // startActivity(Intent(this, QueueTimeActivity::class.java))
+            // startActivity(Intent(this, QueueTimeActivity::class.java))
 
             //Para aparecer o modal
-             /*val mDialogView = LayoutInflater.from(this).inflate(R.layout.modal_queuetime, null);
-             val mBuilder = AlertDialog.Builder(this)
-                 .setView(mDialogView)
-             //show dialog
-             val mAlertDialog = mBuilder.show()
-             //close modal
-             val close: ImageView = mDialogView.findViewById(R.id.imgExit)
-             close.setOnClickListener{
-                 mAlertDialog.dismiss()
-             }*/
+            /*val mDialogView = LayoutInflater.from(this).inflate(R.layout.modal_queuetime, null);
+            val mBuilder = AlertDialog.Builder(this)
+                .setView(mDialogView)
+            //show dialog
+            val mAlertDialog = mBuilder.show()
+            //close modal
+            val close: ImageView = mDialogView.findViewById(R.id.imgExit)
+            close.setOnClickListener{
+                mAlertDialog.dismiss()
+            }*/
 
         }
     }
@@ -89,6 +91,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         val cpf = edit_cpf.text.toString()
         val password = edit_password.text.toString()
 
-        mViewModel.doLogin(cpf, password)
+        val res = mViewModel.doLogin(cpf, password)
+
+        mSharedPreferences = SaveData(this)
+        val str = mSharedPreferences.get()
+
+        Toast.makeText(this, "${str}", Toast.LENGTH_LONG).show()
     }
 }

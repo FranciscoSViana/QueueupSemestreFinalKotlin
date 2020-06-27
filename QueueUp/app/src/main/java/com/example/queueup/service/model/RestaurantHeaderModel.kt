@@ -6,6 +6,9 @@ import com.google.gson.annotations.SerializedName
 @Entity(tableName = "tb_restaurante")
 class RestaurantHeaderModel(
 
+    @SerializedName("idRestaurante")
+    var idRestaurante: String,
+
     @SerializedName("nome")
     var name: String?,
 

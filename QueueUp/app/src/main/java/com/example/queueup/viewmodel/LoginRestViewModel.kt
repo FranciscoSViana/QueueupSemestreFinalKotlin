@@ -25,6 +25,12 @@ class LoginRestViewModel(application: Application) : AndroidViewModel(applicatio
     fun doLoginRest(cnpj: String, password: String) {
         mRestaurantRepository.login(cnpj, password, object : APIRestaurantListener<Any?> {
             override fun onSuccess(modelRestaurant: RestaurantHeaderModel) {
+                modelRestaurant.idRestaurante?.let {
+                    mSharedPreferences.store(
+                        TaskConstants.SHAREDRESTAURANT.ID_RESTAURANTE,
+                        it
+                    )
+                }
                 modelRestaurant.cnpj?.let {
                     mSharedPreferences.store(
                         TaskConstants.SHAREDRESTAURANT.CNPJ_KEY,

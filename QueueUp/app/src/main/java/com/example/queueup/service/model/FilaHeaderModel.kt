@@ -5,10 +5,10 @@ import com.google.gson.annotations.SerializedName
 data class FilaHeaderModel(
 
     @SerializedName("idCliente")
-    var idCliente: Int?,
+    var idCliente: String?,
 
     @SerializedName("idRestaurante")
-    var idRestaurante: Int?,
+    var idRestaurante: String?,
 
     @SerializedName("posicao")
     var posicao: Int?

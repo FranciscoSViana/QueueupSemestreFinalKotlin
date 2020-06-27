@@ -26,6 +26,7 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         mPersonRepository.login(cpf, password, object : APIListener {
             override fun onSuccess(modelPerson: PersonHeaderModel) {
 
+                mSharedPreferences.store(TaskConstants.SHARED.ID_CLIENTE, modelPerson.idCliente)
                 mSharedPreferences.store(TaskConstants.SHARED.CPF_KEY, modelPerson.cpf)
                 mSharedPreferences.store(TaskConstants.SHARED.PASSWORD_KEY, modelPerson.password)
                 mSharedPreferences.store(TaskConstants.SHARED.PERSON_NAME, modelPerson.name)

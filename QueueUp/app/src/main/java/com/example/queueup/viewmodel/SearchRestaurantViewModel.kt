@@ -34,6 +34,7 @@ class SearchRestaurantViewModel : ViewModel() {
                             for (result in it) {
                                 Log.d("Nome: ", result.name.toString())
                                 val restaurante = RestaurantHeaderModel(
+                                    idRestaurante = result.idRestaurante,
                                     name = result.name,
                                     cnpj = result.cnpj,
                                     city = result.city,
@@ -77,6 +78,7 @@ class SearchRestaurantViewModel : ViewModel() {
                         response.body()?.let {
                             for (result in it) {
                                 val restaurante = RestaurantHeaderModel(
+                                    idRestaurante = result.idRestaurante,
                                     name = result.name,
                                     cnpj = result.cnpj,
                                     city = result.city,

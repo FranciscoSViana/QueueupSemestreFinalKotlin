@@ -1,35 +1,34 @@
 package com.example.queueup.service.repository.remote
 
+import androidx.lifecycle.MutableLiveData
 import com.example.queueup.service.model.FilaHeaderModel
 import feign.Param
 import feign.RequestLine
+import okhttp3.ResponseBody
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface FilaService {
 
     @POST("/fila/entrar")
-    fun entrarFila(): Call<FilaHeaderModel>
+    fun entrarFila(@Body fila: FilaHeaderModel): Call<List<FilaHeaderModel>>
 
     @POST("fila/remover/{restaurante}")
     fun remover(
-        @Path(value = "restaurante", encoded = true) restaurante: Int
-    ): Call<FilaHeaderModel>
+        @Path(value = "restaurante", encoded = true) restaurante: String
+    ): Call<List<FilaHeaderModel>>
 
     @GET("/fila/posicao/{restaurante}/{cliente}")
     fun atualizaPosicao(
-        @Path(value = "restaurante", encoded = true) restaurante: Int,
-        @Path(value = "cliente", encoded = true) cliente: Int
-    ): Call<FilaHeaderModel>
+        @Path(value = "restaurante", encoded = true) restaurante: String,
+        @Path(value = "cliente", encoded = true) cliente: String
+    ): Call<Int>
 
     @GET("/fila/filaPorRestaurante/{idRestaurante}")
-    fun filaPorRestaurante(@Path(value = "idRestaurante", encoded = true) idRestaurante: Int
+    fun filaPorRestaurante(@Path(value = "idRestaurante", encoded = true) idRestaurante: String
     ): Call<List<FilaHeaderModel>>
 
     @GET("/fila/filaTotalRestaurante/{idRestaurante}")
-    fun filaTotalRestaurante(@Path(value = "idRestaurante", encoded = true)idRestaurante: Int
-    ): Call<FilaHeaderModel>
+    fun filaTotalRestaurante(@Path(value = "idRestaurante", encoded = true)idRestaurante: String
+    ): Call<Int>
 }

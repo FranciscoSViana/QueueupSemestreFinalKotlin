@@ -4,6 +4,7 @@ class TaskConstants private constructor() {
 
     //SharedPreferences
     object SHARED {
+        const val ID_CLIENTE = "idCliente"
         const val CPF_KEY = "cpf"
         const val PASSWORD_KEY = "senha"
         const val PERSON_NAME = "nome"
@@ -11,6 +12,7 @@ class TaskConstants private constructor() {
 
     object SHAREDRESTAURANT {
 
+        const val ID_RESTAURANTE = "idRestaurante"
         const val RESTAURANT_NAME = "nome"
         const val CNPJ_KEY = "cnpj"
         const val RESTAURANT_CITY = "cidade"

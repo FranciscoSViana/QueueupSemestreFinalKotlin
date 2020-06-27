@@ -25,6 +25,13 @@ class RegisterRestaurantViewModel(application: Application) : AndroidViewModel(a
             restaurant,
             object : APIRestaurantListener<Any?> {
                 override fun onSuccess(modelRestaurant: RestaurantHeaderModel) {
+                    modelRestaurant.idRestaurante?.let {
+                        mSharedPreferences.store(
+                            TaskConstants.SHAREDRESTAURANT.ID_RESTAURANTE,
+                            it
+                        )
+                    }
+
                     modelRestaurant.name?.let {
                         mSharedPreferences.store(
                             TaskConstants.SHAREDRESTAURANT.RESTAURANT_NAME,

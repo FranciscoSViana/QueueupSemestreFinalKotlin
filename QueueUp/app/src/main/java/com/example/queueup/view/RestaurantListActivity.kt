@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -175,6 +176,7 @@ class RestaurantListActivity : AppCompatActivity(), RestAdapter.OnClickItem {
         intent.putExtra("tipoRest", restaurante.type)
         intent.putExtra("imagemRest", restaurante.imagem)
         intent.putExtra("logoRest", restaurante.logo)
+        intent.putExtra("idRestaurante", restaurante.idRestaurante)
 
         startActivity(intent)
     }
