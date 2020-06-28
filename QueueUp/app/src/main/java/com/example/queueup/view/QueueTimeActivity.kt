@@ -31,8 +31,9 @@ class QueueTimeActivity : AppCompatActivity() {
        // val user = mShared.get(TaskConstants.SHARED.ID_CLIENTE)
 
         //val idRest = intent.extras!!.get("idRest")
-        val posicaoFila = intent.extras!!.getInt("posicaoFila")
+        var posicaoFila = intent.extras!!.getInt("posicaoFila")
         posicao_fila.text = posicaoFila.toString()
+
 
 
       //  posicao_fila.text = mViewModel.atualizaPosicao("${idRest}", user).toString()

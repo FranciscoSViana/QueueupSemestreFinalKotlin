@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         if (v.id == R.id.button_login) {
             handleLogin()
         } else if (v.id == R.id.button_register) {
-            startActivity(Intent(this, RegisterOptionActivity::class.java))
+            startActivity(Intent(this, RegisterUserActivity::class.java))
             // startActivity(Intent(this, QueueTimeActivity::class.java))
 
             //Para aparecer o modal
@@ -93,9 +93,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         val res = mViewModel.doLogin(cpf, password)
 
-        mSharedPreferences = SaveData(this)
-        val str = mSharedPreferences.get()
-
-        Toast.makeText(this, "${str}", Toast.LENGTH_LONG).show()
+//        mSharedPreferences = SaveData(this)
+//        val str = mSharedPreferences.get()
+//
+//        Toast.makeText(this, "${str}", Toast.LENGTH_LONG).show()
     }
 }

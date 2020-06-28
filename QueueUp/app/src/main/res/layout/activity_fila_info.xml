@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textColor="#000000"
-        android:text="Tempo de espera estimado"
+        android:text="Pessoas na fila"
         android:textAlignment="center"/>
     <TextView
         android:layout_marginTop="10dp"
@@ -63,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:textSize="17sp"
-        android:text="17 Minutos"
+        android:text=""
         android:textColor="#000000"
         android:textStyle="bold"
         android:textAlignment="center"/>

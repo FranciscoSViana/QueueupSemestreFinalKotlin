@@ -12,10 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.queueup.R
 import com.example.queueup.adapters.AlphaAdapters
 import com.example.queueup.service.model.RestaurantHeaderModel
-import com.example.queueup.viewmodel.AlphaChar
-import com.example.queueup.viewmodel.RegisterRestaurantViewModel
-import com.example.queueup.viewmodel.SearchRestaurantViewModel
-import com.example.queueup.viewmodel.UserHomePageViewModel
+import com.example.queueup.service.repository.local.SecurityPreferences
+import com.example.queueup.viewmodel.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_user_home_page.*
 
@@ -26,6 +24,8 @@ class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
     private var alphaAdapters: AlphaAdapters? = null
 
     private lateinit var mViewModel: UserHomePageViewModel
+    private lateinit var viewModel: FilaViewModel
+    private lateinit var mShared: SecurityPreferences
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +39,8 @@ class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
         bottomNavigationView.setOnNavigationItemSelectedListener{
             when (it.itemId){
                 R.id.navigationFila -> {
+
+                    //val posicaoFila = intent.extras!!.getInt("posicaoFila")
                     val intent = Intent(this, QueueTimeActivity::class.java)
                     startActivity(intent)
                     true
