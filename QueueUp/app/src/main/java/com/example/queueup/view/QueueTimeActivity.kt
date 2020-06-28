@@ -31,7 +31,7 @@ class QueueTimeActivity : AppCompatActivity() {
        // val user = mShared.get(TaskConstants.SHARED.ID_CLIENTE)
 
         //val idRest = intent.extras!!.get("idRest")
-        var posicaoFila = intent.extras!!.getInt("posicaoFila")
+        val posicaoFila = intent.extras!!.getInt("posicaoFila")
         posicao_fila.text = posicaoFila.toString()
 
 

@@ -23,7 +23,7 @@ class FilaViewModel : ViewModel() {
     val rest: MutableLiveData<List<FilaHeaderModel>> = MutableLiveData()
     private lateinit var save: SecurityPreferences
     var qtd: Int = 0
-    var posicao = 0
+    var posicao = 1
 
     fun entrarFila(fila: FilaHeaderModel) {
         RetrofitClient.createService(FilaService::class.java).entrarFila(fila)
