@@ -3,7 +3,9 @@ package com.example.queueup.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.os.PersistableBundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
@@ -44,17 +46,26 @@ class FilaInfo : AppCompatActivity() {
         myArrayAdap.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         mySpinner.setAdapter(myArrayAdap)
 
+        Handler().postDelayed({
+            mViewModel.atualizaPosicao(idRest, idCliente, this)
+
+        },25000)
+
 
         bt_fila.setOnClickListener {
             mShared = SecurityPreferences(this)
             val user = mShared.get(TaskConstants.SHARED.ID_CLIENTE)
             val iRest = mShared.get(TaskConstants.SHAREDRESTAURANT.ID_RESTAURANTE)
-
-            posicaoFila(idRest, idCliente, this)
-
             mViewModel.entrarFila(FilaHeaderModel(user, iRest, 0))
-            Toast.makeText(this, "Você entrou na fila com sucesso!!", Toast.LENGTH_LONG).show()
-            startActivity(Intent(this, QueueTimeActivity::class.java))
+
+            Handler().postDelayed({
+            mViewModel.atualizaPosicao(iRest, user, this)
+
+            },5000)
+
+            //val intent = Intent(this, QueueTimeActivity::class.java)
+            //intent.putExtra("posicao", posicao.toString().toInt())
+            // startActivity(intent)
         }
 
         mShared = SecurityPreferences(this)
@@ -65,10 +76,6 @@ class FilaInfo : AppCompatActivity() {
         // Toast.makeText(this, idRest, Toast.LENGTH_LONG).show()
         val qtdeFila = intent.extras!!.getInt("qtdFila")
         tv_minutos.text = qtdeFila.toString()
-    }
-
-    private fun posicaoFila(idRest: String, idCliente: String, activity: FilaInfo) {
-        FilaViewModel().atualizaPosicao(idRest, idCliente, activity)
     }
 
 

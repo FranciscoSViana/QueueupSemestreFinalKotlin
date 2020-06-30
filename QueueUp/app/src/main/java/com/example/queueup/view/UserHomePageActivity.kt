@@ -36,11 +36,12 @@ class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation).also {
             it.selectedItemId = R.id.navigationRestaurant
         }
+
         bottomNavigationView.setOnNavigationItemSelectedListener{
             when (it.itemId){
                 R.id.navigationFila -> {
 
-                    //val posicaoFila = intent.extras!!.getInt("posicaoFila")
+                    val posicaoFila = intent.extras!!.getInt("posicaoFila")
                     val intent = Intent(this, QueueTimeActivity::class.java)
                     startActivity(intent)
                     true
@@ -106,6 +107,7 @@ class UserHomePageActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(Intent(this, CardViewRestaurantActivity::class.java))
         }
     }
+
 }
 
 

@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         observe()
 
         //Verifica se o usuário está logado
-        verifyLoggedUser()
+      // verifyLoggedUser()
     }
 
     override fun onClick(v: View) {
@@ -64,9 +64,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     //Verifica se o usuário está logado
 
-    private fun verifyLoggedUser() {
-        mViewModel.verifyLoggedUser()
-    }
+//    private fun verifyLoggedUser() {
+//        mViewModel.verifyLoggedUser()
+//    }
 
     //Observa a ViewModel
     private fun observe() {

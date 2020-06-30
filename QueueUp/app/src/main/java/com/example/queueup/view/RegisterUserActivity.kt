@@ -40,7 +40,7 @@ class RegisterUserActivity : AppCompatActivity(), View.OnClickListener {
     private fun observe() {
         mViewModel.create.observe(this, Observer {
             if (it.success()) {
-                startActivity(Intent(this, UserHomePageActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
             } else {
                 Toast.makeText(applicationContext, it.failure(), Toast.LENGTH_LONG).show()
             }

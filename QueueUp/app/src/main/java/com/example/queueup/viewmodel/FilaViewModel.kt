@@ -1,9 +1,7 @@
 package com.example.queueup.viewmodel
 
-import android.content.Context
 import android.content.Intent
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.queueup.service.model.FilaHeaderModel
@@ -13,18 +11,19 @@ import com.example.queueup.service.repository.remote.RetrofitClient
 import com.example.queueup.view.FilaInfo
 import com.example.queueup.view.QueueTimeActivity
 import com.example.queueup.view.RestaurantDetailsActivity
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.*
+import java.util.logging.Handler
+import kotlin.Int as Int1
 
 class FilaViewModel : ViewModel() {
 
     val rest: MutableLiveData<List<FilaHeaderModel>> = MutableLiveData()
     private lateinit var save: SecurityPreferences
-    var qtd: Int = 0
-    var posicao = 1
-
+    var qtd: Int1 = 0
+    var posicao: Int1 = 0
     fun entrarFila(fila: FilaHeaderModel) {
         RetrofitClient.createService(FilaService::class.java).entrarFila(fila)
             .enqueue(object : Callback<List<FilaHeaderModel>> {
@@ -85,20 +84,25 @@ class FilaViewModel : ViewModel() {
     }
 
     fun atualizaPosicao(idRestaurante: String, idCliente: String, activity: FilaInfo) {
-        RetrofitClient.createService(FilaService::class.java).atualizaPosicao(idRestaurante, idCliente)
-            .enqueue(object : Callback<Int> {
-                override fun onFailure(call: Call<Int>, t: Throwable) {
+
+        RetrofitClient.createService(FilaService::class.java)
+            .atualizaPosicao(idRestaurante, idCliente)
+            .enqueue(object : Callback<Int1> {
+
+                override fun onFailure(call: Call<Int1>, t: Throwable) {
 
                 }
 
                 override fun onResponse(
-                    call: Call<Int>,
-                    response: Response<Int>
+                    call: Call<Int1>,
+                    response: Response<Int1>
                 ) {
+
                     posicao = response.body().toString().toInt()
-                    Log.d("posição", posicao.toString())
+
+                    Log.d("posicao", posicao.toString())
                     val intent = Intent(activity.applicationContext, QueueTimeActivity::class.java)
-                    intent.putExtra("posicaoFila", posicao)
+                    intent.putExtra("posicao", posicao -1)
                     activity.startActivity(intent)
                 }
 
@@ -135,14 +139,14 @@ class FilaViewModel : ViewModel() {
 
     fun filaTotalRestaurante(idRestaurante: String, activity: RestaurantDetailsActivity) {
         RetrofitClient.createService(FilaService::class.java).filaTotalRestaurante(idRestaurante)
-            .enqueue(object : Callback<Int> {
-                override fun onFailure(call: Call<Int>, t: Throwable) {
+            .enqueue(object : Callback<Int1> {
+                override fun onFailure(call: Call<Int1>, t: Throwable) {
 
                 }
 
                 override fun onResponse(
-                    call: Call<Int>,
-                    response: Response<Int>
+                    call: Call<Int1>,
+                    response: Response<Int1>
                 ) {
 
                     qtd = response.body().toString().toInt()
@@ -150,7 +154,6 @@ class FilaViewModel : ViewModel() {
                     val intent = Intent(activity.applicationContext, FilaInfo::class.java)
                     intent.putExtra("qtdFila", qtd)
                     activity.startActivity(intent)
-
 
                 }
 
